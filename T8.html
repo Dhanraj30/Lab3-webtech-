@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>t8</title>
+<style>
+	#menu {
+  display: flex;
+}
+
+#menu > li {
+  flex: 1;
+}
+
+#menu > li > ul {
+  display: none;
+}
+
+
+</style>
+</head>
+<body>
+	<ul id="menu">
+  <li><a href="#">Item 1</a>
+    <ul>
+      <li><a href="#">Subitem 1</a></li>
+      <li><a href="#">Subitem 2</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 2</a>
+    <ul>
+      <li><a href="#">Subitem 1</a></li>
+      <li><a href="#">Subitem 2</a></li>
+    </ul>
+  </li>
+</ul>
+<script>
+var menuItems = document.querySelectorAll("#menu > li");
+
+for (var i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener("click", function() {
+    var submenu = this.querySelector("ul");
+    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+  });
+}
+
+</script>
+</body>
+</html>
+
+
+
